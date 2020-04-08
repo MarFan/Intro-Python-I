@@ -54,10 +54,8 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**kwargs):
-    return ", ".join(
-        f"key: {param}: value: {value}"
-        for param, value in kwargs.items()
-    )
+    for key, value in kwargs.items():
+        print(f"key: {key}, value: {value}")
 
 # Should print
 # key: a, value: 12
@@ -76,4 +74,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-# f4(d)
+f4(d)
